@@ -1,16 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>My Portfolio</title>
+
 <style>
   body {
     margin: 0;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     background: #0f172a;
     color: white;
-    text-align: center;
   }
 
+  /* NAVBAR */
+  nav {
+    position: sticky;
+    top: 0;
+    background: #1e293b;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    color: #60a5fa;
+  }
+
+  /* SECTIONS */
   section {
     padding: 60px 20px;
+    text-align: center;
   }
 
   h1 {
@@ -19,60 +46,114 @@
 
   h2 {
     color: #60a5fa;
+    margin-bottom: 20px;
   }
 
-  div {
+  /* SKILLS */
+  .skills span {
+    display: inline-block;
     background: #1e293b;
-    margin: 10px auto;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 8px;
+  }
+
+  /* PROJECT CARDS */
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card {
+    background: #1e293b;
     padding: 20px;
-    width: 60%;
-    border-radius: 10px;
+    border-radius: 12px;
+    width: 250px;
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    background: #334155;
+  }
+
+  /* CONTACT */
+  .contact a {
+    color: #60a5fa;
+    text-decoration: none;
   }
 </style>
-  <title>My Portfolio</title>
+
 </head>
 
 <body>
 
-  <!-- HERO SECTION -->
-  <section>
-    <h1>Hi, I'm Akshayanil 👋</h1>
-    <p>Python Developer | Arduino | IoT Enthusiast</p>
-  </section>
+<!-- NAV -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <!-- ABOUT -->
-  <section>
-    <h2>About Me</h2>
-    <p>I am passionate about building real-world projects using code and electronics.</p>
-  </section>
+<!-- HERO -->
+<section id="home">
+  <h1>Hi, I'm Akshayanil 👋</h1>
+  <p>Python Developer | Arduino | IoT Enthusiast</p>
+</section>
 
-  <!-- SKILLS -->
-  <section>
-    <h2>Skills</h2>
-    <p>Python, HTML, CSS, Arduino, ESP32</p>
-  </section>
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am passionate about building real-world projects using code and electronics.</p>
+</section>
 
-  <!-- PROJECTS -->
-  <section>
-    <h2>Projects</h2>
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>Python</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>Arduino</span>
+    <span>ESP32</span>
+    <span>IoT</span>
+  </div>
+</section>
 
-    <div>
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="projects">
+
+    <div class="card">
       <h3>Weather App</h3>
-      <p>Python API based weather project.</p>
+      <p>Python API based weather application.</p>
     </div>
 
-    <div>
+    <div class="card">
       <h3>RFID Door Lock</h3>
-      <p>Arduino based smart security system.</p>
+      <p>Arduino smart security system using RFID.</p>
     </div>
 
-  </section>
+    <div class="card">
+      <h3>LED Control</h3>
+      <p>IoT automation project using Arduino.</p>
+    </div>
 
-  <!-- CONTACT -->
-  <section>
-    <h2>Contact</h2>
-    <p>Email: yourmail@gmail.com</p>
-  </section>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: yourmail@gmail.com</p>
+  <p>GitHub: <a href="https://github.com/">My Profile</a></p>
+</section>
 
 </body>
 </html>

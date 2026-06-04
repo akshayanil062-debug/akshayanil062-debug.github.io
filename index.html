@@ -1,1 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akshayanil Portfolio</title>
 
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(30, 41, 59, 0.95);
+  padding: 15px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+nav a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin: 0;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero p {
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.skills span {
+  background: #1e293b;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  transform: scale(1.1);
+  background: #334155;
+}
+
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: #334155;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <h1>Hi, I'm Akshayanil 👋</h1>
+  <p>Python Developer | Arduino | IoT Enthusiast</p>
+
+  <button class="btn" onclick="document.getElementById('projects').scrollIntoView()">
+    View My Work
+  </button>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am passionate developer who builds real-world projects using Python, Arduino, ESP32 and IoT systems.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>Python</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Arduino</span>
+    <span>ESP32</span>
+    <span>IoT</span>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="projects">
+
+    <div class="card">
+      <h3>Weather App</h3>
+      <p>Python API based real-time weather system.</p>
+    </div>
+
+    <div class="card">
+      <h3>RFID Door Lock</h3>
+      <p>Arduino-based smart security system.</p>
+    </div>
+
+    <div class="card">
+      <h3>LED Control System</h3>
+      <p>IoT automation using ESP32 and Arduino.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: yourmail@gmail.com</p>
+  <p>GitHub: https://github.com/</p>
+</section>
+
+<footer>
+  <p>© 2026 Akshayanil | Built with GitHub Pages</p>
+</footer>
+
+</body>
+</html>
